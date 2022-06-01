@@ -1,0 +1,171 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/ldbc-snb-validation-generator/^1.0.0/components/context.jsonld",
+    "https://linkedsoftwaredependencies.org/bundles/npm/sparql-query-parameter-instantiator/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "urn:ldbc-snb-validation-generator:default",
+  "@type": "ValidationGenerator",
+  "parameterSource": {
+    "@type": "ParametersSourceLdbcValidation",
+    "path": "path/to/validation_params-sf1-without-updates.csv"
+  },
+  "destination": {
+    "@type": "QueryResultDestinationDirectory",
+    "path": "output"
+  },
+  "queryHandlers": [
+    {
+      "@type": "SparqlQueryHandler",
+      "identifier": "com.ldbc.driver.workloads.ldbc.snb.interactive.LdbcQuery1",
+      "templateFilePath": "path/to/queries/interactive-complex-1.sparql",
+      "variables": [
+        {
+          "@type": "VariableTemplateNamedNode",
+          "name": "rootPerson",
+          "valueTransformers": [
+            {
+              "@id": "urn:sparql-query-parameter-instantiator:valueTransformerPersonIdToIri",
+              "@type": "ValueTransformerReplaceIri",
+              "searchRegex": "^(.*)$",
+              "replacementString": "http://localhost:3000/pods/$1/profile/card#me"
+            }
+          ]
+        },
+        {
+          "@type": "VariableTemplateLiteral",
+          "name": "firstName"
+        }
+      ],
+      "results": [
+        {
+          "@type": "VariableTemplateLiteral",
+          "name": "friendId"
+        },
+        {
+          "@type": "VariableTemplateLiteral",
+          "name": "friendLastName"
+        },
+        {
+          "@type": "VariableTemplateLiteral",
+          "name": "distanceFromPerson"
+        },
+        {
+          "@type": "VariableTemplateTimestamp",
+          "name": "friendBirthday"
+        },
+        {
+          "@type": "VariableTemplateLiteral",
+          "name": "friendCreationDate"
+        },
+        {
+          "@type": "VariableTemplateLiteral",
+          "name": "friendGender"
+        },
+        {
+          "@type": "VariableTemplateLiteral",
+          "name": "friendBrowserUsed"
+        },
+        {
+          "@type": "VariableTemplateLiteral",
+          "name": "friendLocationIp"
+        },
+        {
+          "@type": "VariableTemplateList",
+          "name": "friendEmails",
+          "separator": ", ",
+          "innerTemplate": {
+            "@type": "VariableTemplateLiteral",
+            "name": "friendEmail"
+          }
+        },
+        {
+          "@type": "VariableTemplateList",
+          "name": "friendLanguages",
+          "separator": ", ",
+          "innerTemplate": {
+            "@type": "VariableTemplateLiteral",
+            "name": "friendLanguage"
+          }
+        },
+        {
+          "@type": "VariableTemplateLiteral",
+          "name": "friendCityName"
+        },
+        {
+          "@type": "VariableTemplateList",
+          "name": "friendUniversities",
+          "separator": ", ",
+          "innerTemplate": {
+            "@type": "VariableTemplateList",
+            "name": "friendUniversity",
+            "separator": " ",
+            "innerTemplate": {
+              "@type": "VariableTemplateLiteral",
+              "name": "friendUniversityDetail"
+            }
+          }
+        },
+        {
+          "@type": "VariableTemplateList",
+          "name": "friendCompanies",
+          "separator": ", ",
+          "innerTemplate": {
+            "@type": "VariableTemplateList",
+            "name": "friendCompany",
+            "separator": " ",
+            "innerTemplate": {
+              "@type": "VariableTemplateLiteral",
+              "name": "friendCompanyDetail"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "SparqlQueryHandler",
+      "identifier": "com.ldbc.driver.workloads.ldbc.snb.interactive.LdbcQuery2",
+      "templateFilePath": "path/to/queries/interactive-complex-2.sparql",
+      "variables": [
+        {
+          "@type": "VariableTemplateNamedNode",
+          "name": "rootPerson",
+          "valueTransformers": [
+            {
+              "@id": "urn:sparql-query-parameter-instantiator:valueTransformerPersonIdToIri"
+            }
+          ]
+        },
+        {
+          "@type": "VariableTemplateTimestamp",
+          "name": "maxDate"
+        }
+      ],
+      "results": [
+        {
+          "@type": "VariableTemplateLiteral",
+          "name": "personId"
+        },
+        {
+          "@type": "VariableTemplateLiteral",
+          "name": "personFirstName"
+        },
+        {
+          "@type": "VariableTemplateLiteral",
+          "name": "personLastName"
+        },
+        {
+          "@type": "VariableTemplateLiteral",
+          "name": "messageId"
+        },
+        {
+          "@type": "VariableTemplateLiteral",
+          "name": "messageContent"
+        },
+        {
+          "@type": "VariableTemplateTimestamp",
+          "name": "messageCreationDate"
+        }
+      ]
+    }
+  ]
+}
