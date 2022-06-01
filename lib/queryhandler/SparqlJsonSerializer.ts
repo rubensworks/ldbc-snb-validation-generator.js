@@ -1,5 +1,5 @@
 import type * as RDF from '@rdfjs/types';
-import type { IVariableTemplate } from '../../../sparql-query-parameter-instantiator';
+import type { IVariableTemplate } from 'sparql-query-parameter-instantiator';
 import type { QueryParameters } from '../QueryParameters';
 
 /**
