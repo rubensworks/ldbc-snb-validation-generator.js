@@ -1,5 +1,5 @@
 {
-  "name": "ldbc-snb-validation-generator",
+  "name": "ldbc-snb-validation-generator.js",
   "version": "1.1.0",
   "description": "Generates SPARQL validation queries and results",
   "keywords": [
@@ -10,14 +10,14 @@
   ],
   "main": "index.js",
   "typings": "index",
-  "repository": "git@github.com:rubensworks/ldbc-snb-validation-generator.js.git",
+  "repository": "git@github.com:SolidBench/ldbc-snb-validation-generator.js.js.git",
   "author": "Ruben Taelman <rubensworks@gmail.com>",
   "bugs": {
-    "url": "https://github.com/rubensworks/ldbc-snb-validation-generator.js/issues"
+    "url": "https://github.com/SolidBench/ldbc-snb-validation-generator.js.js/issues"
   },
-  "homepage": "https://github.com/rubensworks/ldbc-snb-validation-generator.js#readme",
+  "homepage": "https://github.com/SolidBench/ldbc-snb-validation-generator.js.js#readme",
   "bin": {
-    "ldbc-snb-validation-generator": "./bin/runner.js"
+    "ldbc-snb-validation-generator.js": "./bin/runner.js"
   },
   "license": "MIT",
   "lsd:module": true,

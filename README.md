@@ -1,7 +1,7 @@
 # LDBC SNB Validation Generator
 
-[![Build status](https://github.com/rubensworks/ldbc-snb-validation-generator.js/workflows/CI/badge.svg)](https://github.com/rubensworks/ldbc-snb-validation-generator.js/actions?query=workflow%3ACI)
-[![Coverage Status](https://coveralls.io/repos/github/rubensworks/ldbc-snb-validation-generator.js/badge.svg?branch=master)](https://coveralls.io/github/rubensworks/ldbc-snb-validation-generator.js?branch=master)
+[![Build status](https://github.com/SolidBench/ldbc-snb-validation-generator.js/workflows/CI/badge.svg)](https://github.com/SolidBench/ldbc-snb-validation-generator.js/actions?query=workflow%3ACI)
+[![Coverage Status](https://coveralls.io/repos/github/SolidBench/ldbc-snb-validation-generator.js/badge.svg?branch=master)](https://coveralls.io/github/SolidBench/ldbc-snb-validation-generator.js?branch=master)
 [![npm version](https://badge.fury.io/js/ldbc-snb-validation-generator.svg)](https://www.npmjs.com/package/ldbc-snb-validation-generator)
 
 Generates SPARQL validation queries and results for the [LDBC SNB](https://github.com/ldbc/ldbc_snb_datagen_hadoop) social network dataset.
